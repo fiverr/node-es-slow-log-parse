@@ -5,25 +5,13 @@ defaults: &defaults
 
 version: 2
 jobs:
-  dependencies:
-    <<: *defaults
-    steps:
-      - checkout
-      - restore_cache:
-          key: dependency-cache-{{ .Branch }}-{{ .Revision }}
-      - run:
-          name: Install dependencies
-          command: npm i
-      - save_cache:
-          key: dependency-cache-{{ .Branch }}-{{ .Revision }}
-          paths:
-            - ./node_modules
   test:
     <<: *defaults
     steps:
       - checkout
-      - restore_cache:
-          key: dependency-cache-{{ .Branch }}-{{ .Revision }}
+      - run:
+          name: Install dependencies
+          command: npm i
       - run:
           name: Test
           command: npm t
@@ -34,8 +22,6 @@ jobs:
     <<: *defaults
     steps:
       - checkout
-      - restore_cache:
-          key: dependency-cache-{{ .Branch }}-{{ .Revision }}
       - run:
           name: Set NPM tokens
           command: echo -e $NPMRC > ~/.npmrc
@@ -47,11 +33,7 @@ workflows:
   version: 2
   ci-cd:
     jobs:
-      - dependencies:
-          context: org-global
-      - test:
-          requires:
-            - dependencies
+      - test
       - release:
           context: org-global
           requires:
