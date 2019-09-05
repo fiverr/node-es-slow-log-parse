@@ -4,7 +4,7 @@ const {pattern} = require('./lib/pattern');
 const NUMERIC_FIELDS = [
     'shard',
     'took_millis',
-    'total_shards',
+    'total_shards'
 ];
 
 module.exports = (string) => {
@@ -14,7 +14,7 @@ module.exports = (string) => {
         return {};
     }
 
-    const [,timestamp, severity, source, node, index, shard, took, took_millis, types, stats, search_type, total_shards, query] = match;
+    const [, timestamp, severity, source, node, index, shard, took, took_millis, types, stats, search_type, total_shards, query] = match;
 
     return process({
         timestamp,
@@ -35,6 +35,6 @@ module.exports = (string) => {
 
 function process(entry) {
     numerify(entry, NUMERIC_FIELDS);
-    
+
     return entry;
 }

@@ -14,7 +14,7 @@ module.exports = [
             stats: '',
             search_type: 'QUERY_THEN_FETCH',
             total_shards: 10,
-            query: '{"some":{"kind":{"of":{"complex":"json"}}}}',
+            query: '{"some":{"kind":{"of":{"complex":"json"}}}}'
         }
     ]
 ];
