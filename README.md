@@ -36,3 +36,6 @@ Result
     query: '{"some":{"kind":{"of":{"complex":"json"}}}}',
 }
 ```
+
+### Related projects:
+- [rds-slow-log-parse](https://github.com/fiverr/node-rds-slow-log-parse)
