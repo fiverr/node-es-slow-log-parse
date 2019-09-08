@@ -38,4 +38,4 @@ Result
 ```
 
 ### Related projects:
-- [rds-slow-log-parse](https://github.com/fiverr/node-rds-slow-log-parse)
+- [RDS Slow Log line parser](https://github.com/fiverr/node-rds-slow-log-parse)
