@@ -38,7 +38,7 @@ module.exports = (string) => {
 
 function process(entry) {
     // convert elasticsearch timestamp to unix timestamp
-    entry.timestamp = new Date(entry.timestamp.replace(',', '.')).getTime();
+    entry.timestamp = Date.parse(entry.timestamp.replace(',', '.'));
 
     numerify(entry, NUMERIC_FIELDS);
 
