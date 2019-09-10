@@ -6,10 +6,10 @@ describe('ES', () => {
         ([entry, result], index) => {
             test(`Should parse entry ${index} correctly`, () => {
                 const parsed = es(entry);
-                
-                expect(parsed, 'match results').toEqual(result);
-                expect(parsed.timestamp, 'timestamp format').to.be.a('number');
-                expect(`${parsed.timestamp}`, 'timestamp format').to.to.have.lengthOf(13);
+
+                expect(parsed).toEqual(result);
+                expect(typeof parsed.timestamp).toEqual('number');
+                expect(`${parsed.timestamp}`).toHaveLength(13);
             });
         }
     );
