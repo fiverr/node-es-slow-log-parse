@@ -1,20 +1,22 @@
 module.exports = [
     [
-        '[2019-09-04T14:17:34,160][INFO ][index.search.slowlog.query] [es-search-data] [index_1][9] took[225.8ms], took_millis[225], types[type_1], stats[], search_type[QUERY_THEN_FETCH], total_shards[10], source[{"some":{"kind":{"of":{"complex":"json"}}}}],',
+        '[2019-09-10T02:19:57,219][INFO ][index.search.slowlog.query] [node_1] [index_1][1] took[108.4ms], took_millis[108], total_hits[11237041], types[], stats[], search_type[QUERY_THEN_FETCH], total_shards[3], source[{"some":{"kind":{"of":{"complex":"json"}}}}], id[],',
         {
-            timestamp: '2019-09-04T14:17:34,160',
+            timestamp: '2019-09-10T02:19:57,219',
             severity: 'INFO',
             source: 'index.search.slowlog.query',
-            node: 'es-search-data',
+            node: 'node_1',
             index: 'index_1',
-            shard: 9,
-            took: '225.8ms',
-            took_millis: 225,
-            types: 'type_1',
+            shard: 1,
+            took: '108.4ms',
+            took_millis: 108,
+            total_hits: 11237041,
+            types: '',
             stats: '',
             search_type: 'QUERY_THEN_FETCH',
-            total_shards: 10,
-            query: '{"some":{"kind":{"of":{"complex":"json"}}}}'
+            total_shards: 3,
+            query: '{"some":{"kind":{"of":{"complex":"json"}}}}',
+            id: ''
         }
     ]
 ];
