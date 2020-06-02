@@ -39,3 +39,4 @@ Result
 
 ### Related projects:
 - [RDS Slow Log line parser](https://github.com/fiverr/node-rds-slow-log-parse)
+- [MongoDB Slow Log line parser](https://github.com/fiverr/node-mongo-slow-log-parse)
